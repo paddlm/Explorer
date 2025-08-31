@@ -23,7 +23,7 @@ def system_open(p: pathlib.Path):
         elif IS_MAC: os.system(f"open '{str(p).replace("'","'\\''")}'&")
         else: os.system(f"xdg-open '{str(p).replace("'","'\\''")}'&")
     except Exception as e:
-        messagebox.showerror("Hacker Explorer", str(e))
+        messagebox.showerror("PaddlMs Explorer", str(e))
 
 # ----- app -----
 class App(tk.Tk):
@@ -275,3 +275,4 @@ class App(tk.Tk):
 
 if __name__=='__main__':
     App().mainloop()
+
